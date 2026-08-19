@@ -6,9 +6,11 @@ export function StatCard({ label, value, tone = 'default', small }) {
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-      <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
-      <p className={`${small ? 'text-lg' : 'text-xl'} font-bold ${toneClasses[tone]}`}>{value}</p>
+    <div className="min-w-0 rounded-xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+      <p className="truncate text-xs text-slate-500 dark:text-slate-400">{label}</p>
+      <p className={`truncate ${small ? 'text-base' : 'text-xl'} font-bold ${toneClasses[tone]}`}>
+        {value}
+      </p>
     </div>
   )
 }

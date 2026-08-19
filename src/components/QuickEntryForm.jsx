@@ -179,7 +179,7 @@ export function QuickEntryForm() {
       )}
 
       <div className="mt-3 grid grid-cols-2 gap-2">
-        <div>
+        <div className="min-w-0">
           <label className="mb-1 block text-xs font-medium text-slate-500 dark:text-slate-400">
             Categoria
           </label>
@@ -196,7 +196,7 @@ export function QuickEntryForm() {
             ))}
           </select>
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="mb-1 block text-xs font-medium text-slate-500 dark:text-slate-400">
             Data
           </label>

@@ -36,4 +36,14 @@ input[type="number"] {
     @apply w-20 shrink-0 rounded-lg border border-slate-300 bg-white px-2 py-2 text-base
       leading-tight text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
   }
+
+  /* iOS renderiza o valor de <input type="date"> por extenso (ex: "19 de ago. de 2026")
+     usando o idioma do aparelho, sem encolher — em telas estreitas isso não cabia em 16px
+     e estourava a caixa. Inputs de data abrem um seletor nativo (não teclado de texto),
+     então reduzir a fonte aqui não reativa o zoom automático do Safari. */
+  input[type='date'].field {
+    font-size: 14px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
