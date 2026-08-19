@@ -33,8 +33,7 @@ export function NewSelfLoanModal({ onClose }) {
       <form onSubmit={handleSubmit} className="space-y-3">
         <p className="text-xs text-slate-500 dark:text-slate-400">
           Use isto para registrar que você retirou dinheiro de um investimento para uso pessoal e
-          precisa devolver depois. Lance o resgate normalmente na meta em Investimentos e crie aqui
-          o registro da dívida.
+          precisa devolver depois.
         </p>
         <div>
           <label className="mb-1 block text-xs font-medium text-slate-500 dark:text-slate-400">

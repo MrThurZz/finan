@@ -6,8 +6,6 @@ import { Layout } from './components/Layout'
 import { Login } from './pages/Login'
 import { Signup } from './pages/Signup'
 import { Dashboard } from './pages/Dashboard'
-import { Investments } from './pages/Investments'
-import { GoalDetail } from './pages/GoalDetail'
 import { SelfLoans } from './pages/SelfLoans'
 import { Categories } from './pages/Categories'
 import { Reports } from './pages/Reports'
@@ -38,8 +36,6 @@ function App() {
               }
             >
               <Route path="/" element={<Dashboard />} />
-              <Route path="/investimentos" element={<Investments />} />
-              <Route path="/investimentos/:id" element={<GoalDetail />} />
               <Route path="/devo-a-mim" element={<SelfLoans />} />
               <Route path="/relatorios" element={<Reports />} />
               <Route path="/categorias" element={<Categories />} />

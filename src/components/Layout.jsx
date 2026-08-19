@@ -3,7 +3,6 @@ import { useAuth } from '../contexts/AuthContext'
 import { useDarkMode } from '../hooks/useDarkMode'
 import {
   HomeIcon,
-  TrendingUpIcon,
   HandCoinsIcon,
   TagIcon,
   ChartBarIcon,
@@ -14,7 +13,6 @@ import {
 
 const navItems = [
   { to: '/', label: 'Início', icon: HomeIcon, end: true },
-  { to: '/investimentos', label: 'Metas', icon: TrendingUpIcon },
   { to: '/devo-a-mim', label: 'Devo a mim', icon: HandCoinsIcon },
   { to: '/relatorios', label: 'Relatórios', icon: ChartBarIcon },
   { to: '/categorias', label: 'Categorias', icon: TagIcon },
