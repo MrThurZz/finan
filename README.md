@@ -3,7 +3,7 @@
 App web de controle financeiro pessoal, mobile-first, com login individual, lançamentos rápidos de
 entrada/saída, controle de metas de investimento e controle de "empréstimos a mim mesmo".
 
-**Stack:** React + Vite + TailwindCSS · Supabase (Postgres + Auth + RLS) · Recharts · Netlify
+**Stack:** React + Vite + TailwindCSS · Supabase (Postgres + Auth + RLS) · Recharts · Vercel
 
 ## 1. Rodando localmente
 
@@ -15,7 +15,7 @@ npm run dev
 
 O app sobe em `http://localhost:5173`.
 
-### Enviando mudanças para o GitHub (e deploy automático no Netlify)
+### Enviando mudanças para o GitHub (e deploy automático no Vercel)
 
 Depois de editar o código, salve e envie tudo com um único comando:
 
@@ -24,8 +24,9 @@ npm run save -- "descreva aqui o que você mudou"
 ```
 
 Isso faz `git add` + `git commit` + `git push` de uma vez. O repositório está em
-[github.com/MrThurZz/finan](https://github.com/MrThurZz/finan); se o Netlify estiver conectado a ele
-(veja a seção 3), cada envio já dispara um novo deploy automaticamente.
+[github.com/MrThurZz/finan](https://github.com/MrThurZz/finan), conectado ao projeto
+[finan](https://vercel.com/arthur-9a49/finan) na Vercel — cada envio ao branch `master` dispara um
+novo deploy de produção automaticamente.
 
 ## 2. Configurando o Supabase
 
@@ -36,7 +37,7 @@ Isso faz `git add` + `git commit` + `git push` de uma vez. O repositório está 
    em todas as tabelas) e um trigger que popula categorias padrão automaticamente quando um usuário
    se cadastra.
 3. Em **Project Settings → API**, copie a **Project URL** e a **anon public key**.
-4. Cole esses valores no seu `.env` (local) e nas variáveis de ambiente do Netlify (produção):
+4. Cole esses valores no seu `.env` (local) e nas variáveis de ambiente do Vercel (produção):
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
 5. Em **Authentication → Providers**, o login por e-mail/senha já vem habilitado por padrão. Não é
@@ -50,20 +51,22 @@ Todas as tabelas têm RLS habilitado com policies de `select`/`insert`/`update`/
 `auth.uid() = user_id`. Isso significa que cada usuário só enxerga e manipula seus próprios dados —
 não é necessário nenhum filtro adicional no código do front-end.
 
-## 3. Deploy no Netlify
+## 3. Deploy no Vercel
 
-1. Suba este repositório para o GitHub/GitLab.
-2. No Netlify, clique em **Add new site → Import an existing project** e selecione o repositório.
-3. Configure o build:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-   - (Esses valores já estão em [`netlify.toml`](./netlify.toml), então o Netlify detecta
-     automaticamente.)
-4. Em **Site settings → Environment variables**, adicione:
+O projeto já está publicado em **https://finan-gamma.vercel.app**, conectado ao GitHub — todo push
+para `master` gera um novo deploy de produção automaticamente. Para configurar do zero em outra conta:
+
+1. Suba este repositório para o GitHub.
+2. No Vercel, **Add New → Project** e importe o repositório (o framework Vite é detectado
+   automaticamente; build command `npm run build`, output `dist`).
+3. Em **Settings → Environment Variables**, adicione (em Production, Preview e Development):
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
-5. Faça o deploy. O `netlify.toml` já inclui o redirect de SPA (`/* → /index.html`) necessário para
-   as rotas do React Router funcionarem em produção.
+4. Faça o deploy. O [`vercel.json`](./vercel.json) já inclui o rewrite de SPA (`/* → /index.html`)
+   necessário para as rotas do React Router funcionarem em produção.
+
+> Havia um site no Netlify (`fi-nan.netlify.app`) usado antes da migração; ele ficou parado por um
+> bloqueio de créditos da conta free e não é mais usado por este projeto.
 
 ## 4. Estrutura do projeto
 
