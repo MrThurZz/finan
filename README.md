@@ -15,6 +15,18 @@ npm run dev
 
 O app sobe em `http://localhost:5173`.
 
+### Enviando mudanças para o GitHub (e deploy automático no Netlify)
+
+Depois de editar o código, salve e envie tudo com um único comando:
+
+```bash
+npm run save -- "descreva aqui o que você mudou"
+```
+
+Isso faz `git add` + `git commit` + `git push` de uma vez. O repositório está em
+[github.com/MrThurZz/finan](https://github.com/MrThurZz/finan); se o Netlify estiver conectado a ele
+(veja a seção 3), cada envio já dispara um novo deploy automaticamente.
+
 ## 2. Configurando o Supabase
 
 1. Crie um projeto em [supabase.com](https://supabase.com).
