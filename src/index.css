@@ -42,8 +42,8 @@ input[type="number"] {
      e estourava a caixa. Inputs de data abrem um seletor nativo (não teclado de texto),
      então reduzir a fonte aqui não reativa o zoom automático do Safari. */
   input[type='date'].field {
-    font-size: 14px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    font-size: 12px;
+    padding-left: 0.375rem;
+    padding-right: 0.25rem;
   }
 }

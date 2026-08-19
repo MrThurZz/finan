@@ -178,7 +178,7 @@ export function QuickEntryForm() {
         </div>
       )}
 
-      <div className="mt-3 grid grid-cols-2 gap-2">
+      <div className="mt-3 grid grid-cols-[0.85fr_1.15fr] gap-2">
         <div className="min-w-0">
           <label className="mb-1 block text-xs font-medium text-slate-500 dark:text-slate-400">
             Categoria
