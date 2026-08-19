@@ -37,7 +37,7 @@ export function NewGoalModal({ onClose }) {
             placeholder="Ex: Viagem"
             value={form.nome}
             onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
             autoFocus
           />
         </div>
@@ -52,7 +52,7 @@ export function NewGoalModal({ onClose }) {
             placeholder="0,00"
             value={form.valor_alvo}
             onChange={(e) => setForm((f) => ({ ...f, valor_alvo: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
         <div>
@@ -63,7 +63,7 @@ export function NewGoalModal({ onClose }) {
             type="date"
             value={form.prazo}
             onChange={(e) => setForm((f) => ({ ...f, prazo: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
 

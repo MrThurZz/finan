@@ -24,3 +24,16 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+@layer components {
+  /* font-size 16px é obrigatório: abaixo disso o Safari do iOS dá zoom
+     automático ao focar o campo, o que também distorce a proporção da caixa. */
+  .field {
+    @apply w-full min-w-0 rounded-lg border border-slate-300 bg-slate-50 px-3 py-3 text-base
+      leading-tight text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100;
+  }
+  .field-compact {
+    @apply w-20 shrink-0 rounded-lg border border-slate-300 bg-white px-2 py-2 text-base
+      leading-tight text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  }
+}

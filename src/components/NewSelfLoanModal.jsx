@@ -47,7 +47,7 @@ export function NewSelfLoanModal({ onClose }) {
             placeholder="0,00"
             value={form.valor}
             onChange={(e) => setForm((f) => ({ ...f, valor: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
             autoFocus
           />
         </div>
@@ -59,7 +59,7 @@ export function NewSelfLoanModal({ onClose }) {
             type="date"
             value={form.data}
             onChange={(e) => setForm((f) => ({ ...f, data: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
         <div>
@@ -71,7 +71,7 @@ export function NewSelfLoanModal({ onClose }) {
             placeholder="Opcional"
             value={form.descricao}
             onChange={(e) => setForm((f) => ({ ...f, descricao: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
 

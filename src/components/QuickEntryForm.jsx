@@ -114,7 +114,7 @@ export function QuickEntryForm() {
             placeholder="0,00"
             value={form.valor}
             onChange={(e) => set('valor', e.target.value)}
-            className="w-full bg-transparent px-2 py-2.5 text-lg font-semibold outline-none"
+            className="w-full bg-transparent px-2 py-3 text-lg font-semibold outline-none"
             autoFocus
           />
         </div>
@@ -170,7 +170,7 @@ export function QuickEntryForm() {
                 max="60"
                 value={form.parcelas}
                 onChange={(e) => set('parcelas', e.target.value)}
-                className="w-16 rounded border border-slate-300 bg-white px-2 py-1 text-sm dark:border-slate-700 dark:bg-slate-900"
+                className="field-compact"
               />
               <span className="text-sm text-slate-500 dark:text-slate-400">vezes</span>
             </div>
@@ -186,7 +186,7 @@ export function QuickEntryForm() {
           <select
             value={form.categoria_id}
             onChange={(e) => set('categoria_id', e.target.value)}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-2 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           >
             <option value="">Sem categoria</option>
             {filteredCategories.map((c) => (
@@ -204,7 +204,7 @@ export function QuickEntryForm() {
             type="date"
             value={form.data}
             onChange={(e) => set('data', e.target.value)}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-2 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
       </div>
@@ -218,7 +218,7 @@ export function QuickEntryForm() {
           placeholder="Opcional"
           value={form.descricao}
           onChange={(e) => set('descricao', e.target.value)}
-          className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+          className="field"
         />
       </div>
 

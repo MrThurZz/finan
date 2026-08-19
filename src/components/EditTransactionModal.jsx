@@ -80,7 +80,7 @@ export function EditTransactionModal({ transaction, onClose }) {
             min="0"
             value={form.valor}
             onChange={(e) => setForm((f) => ({ ...f, valor: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
         <div>
@@ -90,7 +90,7 @@ export function EditTransactionModal({ transaction, onClose }) {
           <select
             value={form.categoria_id}
             onChange={(e) => setForm((f) => ({ ...f, categoria_id: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-2 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           >
             <option value="">Sem categoria</option>
             {filteredCategories.map((c) => (
@@ -108,7 +108,7 @@ export function EditTransactionModal({ transaction, onClose }) {
             type="date"
             value={form.data}
             onChange={(e) => setForm((f) => ({ ...f, data: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-2 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
         <div>
@@ -119,7 +119,7 @@ export function EditTransactionModal({ transaction, onClose }) {
             type="text"
             value={form.descricao}
             onChange={(e) => setForm((f) => ({ ...f, descricao: e.target.value }))}
-            className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="field"
           />
         </div>
 

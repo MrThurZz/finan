@@ -15,7 +15,7 @@ function CategoryFormRow({ initial, onCancel, onSubmit, pending }) {
         placeholder="Nome da categoria"
         value={form.nome}
         onChange={(e) => setForm((f) => ({ ...f, nome: e.target.value }))}
-        className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-900"
+        className="field bg-white dark:bg-slate-900"
         autoFocus
       />
       <div className="grid grid-cols-3 gap-2">

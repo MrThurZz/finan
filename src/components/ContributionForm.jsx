@@ -66,13 +66,13 @@ export function ContributionForm({ goalId }) {
           placeholder="Valor"
           value={form.valor}
           onChange={(e) => setForm((f) => ({ ...f, valor: e.target.value }))}
-          className="rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+          className="field"
         />
         <input
           type="date"
           value={form.data}
           onChange={(e) => setForm((f) => ({ ...f, data: e.target.value }))}
-          className="rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+          className="field"
         />
       </div>
 
@@ -81,7 +81,7 @@ export function ContributionForm({ goalId }) {
         placeholder="Descrição (opcional)"
         value={form.descricao}
         onChange={(e) => setForm((f) => ({ ...f, descricao: e.target.value }))}
-        className="w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800"
+        className="field"
       />
 
       {error && <p className="text-sm text-rose-600 dark:text-rose-400">{error}</p>}

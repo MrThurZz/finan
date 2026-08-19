@@ -26,7 +26,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+      <header className="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90" style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))' }}>
         <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">Finan</span>
         <div className="flex items-center gap-1">
           <button
@@ -46,11 +46,17 @@ export function Layout() {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-2xl flex-1 px-4 pb-24 pt-4">
+      <main
+        className="mx-auto w-full max-w-2xl flex-1 px-4 pt-4"
+        style={{ paddingBottom: 'calc(6rem + env(safe-area-inset-bottom))' }}
+      >
         <Outlet />
       </main>
 
-      <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
+      <nav
+        className="fixed inset-x-0 bottom-0 z-20 border-t border-slate-200 bg-white/95 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
         <div className="mx-auto flex max-w-2xl justify-between px-2">
           {navItems.map(({ to, label, icon: IconEl, end }) => (
             <NavLink
